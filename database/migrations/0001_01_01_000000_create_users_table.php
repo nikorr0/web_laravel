@@ -1,8 +1,11 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
 
 return new class extends Migration
 {
@@ -35,6 +38,22 @@ return new class extends Migration
             $table->longText('payload');
             $table->integer('last_activity')->index();
         });
+
+        User::create([
+            'name' => 'admin',
+            'email' => 'admin@email.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('password'),
+            'remember_token' => '1234567890',
+        ]);
+
+        User::create([
+            'name' => 'user',
+            'email' => 'user@email.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('password'),
+            'remember_token' => '123456',
+        ]);
     }
 
     /**
