@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
     <body>
-        @include('includes.header')
-        <div class="container mt-5">
+        <div class="container" style="margin-top: 10%;">
             <h1 class="mb-4">Edit card</h1>
             <form action="{{ route('cards.update', $card->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -74,6 +73,6 @@
                 <a href="/cards" class="btn btn-primary">Cancel</a>
             </form>
         </div>
-    <script src="../../main.js"></script>  
     </body>
+    <script src="../../main.js"></script>  
 </html>

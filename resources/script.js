@@ -2,9 +2,9 @@ import * as bootstrap from "bootstrap";
 window.bootstrap = bootstrap;
 import "./scss/style.scss";
 
-var script = document.createElement('script');
-script.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
-document.getElementsByTagName('head')[0].appendChild(script);
+// var script = document.createElement('script');
+// script.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
+// document.getElementsByTagName('head')[0].appendChild(script);
 
 // import Alpine from 'alpinejs';
 // window.Alpine = Alpine;
@@ -44,14 +44,20 @@ $("div[id^='Modal']").on('shown.bs.modal', function (e) {
   });
 });
 
+$(document).ready(function () {
+  window.toggleComments = function (cardId) {
+      const section = $(`#comments-section-${cardId}`);
+      section.toggle();
+  };
+});
 
-// Появление меню при нажатии на свое имя пользователя
+// Появление меню при нажатии на имя пользователя
 $(document).ready(function () {
   const $userMenuToggle = $('#user-menu-toggle');
   const $userMenu = $('#user-menu');
 
   $userMenuToggle.on('click', function (e) {
-      e.stopPropagation(); // Останавливаем всплытие события
+      e.stopPropagation();
       $userMenu.toggleClass('hidden');
   });
 

@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
     <body>
-        @include('includes.header')
-        <div class="container mt-5">
+        <div class="container" style="margin-top: 10%;">
             <h1 class="mb-4">Add new card</h1>
             <form action="/cards" method="POST" enctype="multipart/form-data">
                 @csrf
