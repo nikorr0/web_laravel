@@ -31,7 +31,7 @@ return new class extends Migration
         // $card2 = new Card([
         //     'name' => 'Belgium',
         //     'short_text' => 'Government: Federal parliamentary constitutional monarchy. Total area: 30 689 km.',
-        //     'long_text' => 'Belgium, officially the Kingdom of Belgium, is a country in Northwestern Europe. The country is bordered by the Netherlands to the north, Germany to the east, Luxembourg to the southeast, France to the south, and the North Sea to the west.',
+        //     'long_text' => ' ',
         //     'image_url' => 'images/Flag_of_Belgium.png',
         // ]);
         // $admin->cards()->save($card2);
@@ -51,7 +51,7 @@ return new class extends Migration
     public function down(): void
     {
         // Schema::dropIfExists('users');
-        $admin = User::find(1);
-        $admin->cards()->delete();
+        // $admin = User::find(1);
+        // $admin->cards()->delete();
     }
 };

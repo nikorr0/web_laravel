@@ -28,9 +28,9 @@ body {
     height: 60px;
 }
 
-.navbar-brand {
-    margin-right: auto;
-}
+// .navbar-brand {
+//     margin-right: auto;
+// }
 
 .text-style, .btn, .card-list-name, .on-image-label, .card {
     font-family: "Tahoma";
@@ -132,7 +132,7 @@ body {
 }
 
 .card-list-name {
-    width: calc($block-width + 1500px);
+    // width: calc($block-width + 1500px);
     margin-top: 5%;
     display: flex;
     justify-content: center;
