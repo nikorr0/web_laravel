@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 
-class CardController extends Controller
+class CardController // extends Controller
 {
 
     public function index()

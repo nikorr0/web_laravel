@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'is_admin',
     ];
 
     /**
@@ -46,6 +47,11 @@ class User extends Authenticatable
             'is_admin' => 'boolean',
         ];
     }
+
+    // public function is_admin(): bool
+    // {
+    //     return true;
+    // }
 
     public function cards()
     {

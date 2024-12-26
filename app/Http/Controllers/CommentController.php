@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class CommentController extends Controller
 {
-    public function store(Request $request, Film $card)
+    public function store(Request $request, Card $card)
     {
         $request->validate(['content' => 'required|string|max:1000']);
         $card->comments()->create([

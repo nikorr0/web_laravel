@@ -2,15 +2,15 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
+// use Illuminate\Support\ServiceProvider;
+use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
-use Illuminate\Foundation\Support\Providers\AuthServiceProvider as BaseController;
 
-class AuthServiceProvider extends BaseController
+class AuthServiceProvider extends ServiceProvider
 {
-    protected $policies = [
-        'App\Model' => 'App\Policies\ModelPolicy',
-     ];
+    // protected $policies = [
+    //     'App\Model' => 'App\Policies\ModelPolicy',
+    //  ];
 
     /**
      * Register services.
@@ -23,7 +23,7 @@ class AuthServiceProvider extends BaseController
     /**
      * Bootstrap services.
      */
-    public function boot(): void
+    public function boot()
     {
         $this->registerPolicies();
 
