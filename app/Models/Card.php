@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens; 
 
 class Card extends Model
 {
-    use HasFactory, Notifiable, SoftDeletes;
+    use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
 
     protected $table = 'cards';
 
@@ -24,11 +25,11 @@ class Card extends Model
         return ucfirst($value);
     }
      
-    public function user()
+    public function user()//: BelongsTo
     {
         return $this->belongsTo('App\Models\User');
     }
-
+    
     public function comments()
     {
         return $this->hasMany(Comment::class);

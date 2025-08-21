@@ -5,6 +5,7 @@ use App\Http\Controllers\FriendController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return redirect()->route('cards.index');
@@ -34,3 +35,16 @@ Route::middleware('auth')->group(function () {
 });
 Route::get('/feed', [UserController::class, 'feed'])->middleware('auth')->name('user.feed');
 require __DIR__.'/auth.php';
+
+// Route::get('/login', [AuthController::class, 'showLoginForm'])
+//      ->middleware('guest')
+//      ->name('login');
+
+Route::get('/login', function () {
+    return view('auth.login');
+})->middleware('guest')->name('login');
+
+Route::post('/login', [AuthController::class, 'login'])
+     ->middleware('guest');
+
+Route::middleware('auth:sanctum')->get('/user', fn (Request $r) => $r->user());
