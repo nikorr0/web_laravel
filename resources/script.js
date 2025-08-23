@@ -6,9 +6,9 @@ import "./scss/style.scss";
 // script.src = 'https://code.jquery.com/jquery-3.7.1.min.js';
 // document.getElementsByTagName('head')[0].appendChild(script);
 
-// import Alpine from 'alpinejs';
-// window.Alpine = Alpine;
-// Alpine.start();
+import Alpine from 'alpinejs';
+window.Alpine = Alpine;
+Alpine.start();
 
 const toastTrigger = document.getElementById('liveToastBtn')
 const toastLiveExample = document.getElementById('liveToast')
