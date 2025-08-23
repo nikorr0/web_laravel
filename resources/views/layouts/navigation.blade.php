@@ -1,6 +1,5 @@
 <nav class="border-b border-gray-100">
     <!-- Primary Navigation Menu -->
-    <!-- <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> -->
     <div class="flex justify-between h-16">
         
         <!-- Header -->
@@ -8,8 +7,6 @@
             <nav class="navbar navbar-expand-xl">
                 <div class="container-fluid" style="justify-content: flex-start;">
                     <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Europe_and_the_European_Union.svg/800px-Europe_and_the_European_Union.svg.png" />
-                    <!-- <a class="navbar-brand" href="/">Countries</a> -->
-
                     <x-nav-item :href="route('cards.index')" :active="request()->routeIs('dashboard')">
                         Main page
                     </x-nav-item>
@@ -32,8 +29,6 @@
                             </div>
                         </a>
                     @endif
-
-
 
                     <!-- Settings Dropdown -->
                     @if(auth()->user())
@@ -67,7 +62,4 @@
             </nav>
         </div>
     </div>
-    <!-- </div> -->
 </nav>
-<!-- <script src="./main.js"></script> -->
-<!-- @vite(['public/main.js']) -->
