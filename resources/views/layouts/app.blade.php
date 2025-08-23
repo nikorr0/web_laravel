@@ -34,5 +34,5 @@
             </main>
         </div>
     </body>
-    @vite(['public/main.js'])
+    @vite(['resources/js/main.js'])
 </html>
