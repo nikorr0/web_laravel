@@ -3,13 +3,13 @@ import webpack from 'webpack';
 // const path = require('path');
 
 
-const config: webpack.Configuration =  {
+const sharedConfig: webpack.Configuration =  {
     entry: './resources/script.js',
     mode: 'development',
     watch: true,
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, './public'),
+        path: path.resolve(__dirname, './public'), //path.resolve(__dirname, './resources/js'),
     },
     module:{
         rules: [{
@@ -41,5 +41,22 @@ const config: webpack.Configuration =  {
     }
 };
 
+// compiles in resources/js
+const configResources: webpack.Configuration = {
+  ...sharedConfig,
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'resources/js'),
+  },
+};
 
-export default config;
+// compiles in public/
+const configPublic: webpack.Configuration = {
+  ...sharedConfig,
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'public'),
+  },
+};
+
+export default [configResources, configPublic];
