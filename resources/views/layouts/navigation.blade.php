@@ -6,7 +6,7 @@
         <div class="header-container">
             <nav class="navbar navbar-expand-xl">
                 <div class="container-fluid" style="justify-content: flex-start;">
-                    <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Europe_and_the_European_Union.svg/800px-Europe_and_the_European_Union.svg.png" />
+                    <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/None_%28orthographic_projection%29.svg" />
                     <x-nav-item :href="route('cards.index')" :active="request()->routeIs('dashboard')">
                         Main page
                     </x-nav-item>
