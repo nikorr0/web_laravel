@@ -12,6 +12,8 @@ The application includes role-based access control, where administrators have th
 
 Data models are developed using Laravel's Eloquent ORM and are organized within the app/Models directory. Database structure and schema changes are managed through migrations located in the database/migrations folder.
 
+You can find a cross-platform client application that connects to this Laravel-powered API [here](https://github.com/nikorr0/compose-multiplatform-app).
+
 ---
 
 ## Functionality
